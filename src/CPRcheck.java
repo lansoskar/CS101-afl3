@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CPRcheck {
     static String cpr;
 
-    public static void checkCPR(){
+    public static void checkCPR(){ // opg b
         System.out.println("Write a 10-cipher CPR number");
         Scanner s = new Scanner(System.in);
         cpr = s.nextLine();

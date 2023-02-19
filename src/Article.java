@@ -1,4 +1,4 @@
-public class Article {
+public class Article { // opg c
     private String title;
     private String author;
 

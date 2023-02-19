@@ -1,7 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class RedditPost {
+public class RedditPost extends RedditFrontPage implements Comparable<RedditPost> { // opg e
     private Date date;
     private String author;
     private int votes;
@@ -13,6 +13,16 @@ public class RedditPost {
         this.votes = 1;
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         this.date = new Date();
+    }
+
+    @Override
+    public String toString() {
+        return "RedditPost{" +
+                "date=" + date +
+                ", author='" + author + '\'' +
+                ", votes=" + votes +
+                ", title='" + title + '\'' +
+                '}';
     }
 
     public Date getDate() {
@@ -46,4 +56,16 @@ public class RedditPost {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public int compareTo(RedditPost o) { // desc
+        if (this.votes > o.votes) {
+            return -1;
+        } else if (this.votes == o.votes) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
 }
