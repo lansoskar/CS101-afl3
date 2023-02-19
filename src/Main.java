@@ -22,6 +22,11 @@ public class Main {
             System.out.println(x);
         }*/
 
+        Square a = new Square(5,5);
+        Square b = new Square(10, 10);
+
+        a.compareTo(b);
+
         ArrayList<RedditPost>frontpage = new ArrayList<RedditPost>(); // samme some opg D
         RedditPost one = new RedditPost("Mogens", "caught this fish");
         RedditPost two = new RedditPost("Karl", "i hate my job");

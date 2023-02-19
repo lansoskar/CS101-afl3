@@ -15,7 +15,7 @@ public class Square implements Comparable<Square>{
 
     @Override
     public int compareTo(Square o) {
-        System.out.println(Integer.compare(this.getPerim(), o.getPerim()));
+        System.out.println(Integer.compare(this.getPerim(), o.getPerim())); // retunerer positiv hvis første værdi er størst
         return Integer.compare(this.getPerim(), o.getPerim());
 
         /*
